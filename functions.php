@@ -16,9 +16,9 @@ add_action( 'after_setup_theme', 'register_menu' );
 function setup_my_theme() {
   add_theme_support( 'title-tag' );
 }
+
 add_action( 'after_setup_theme', 'setup_my_theme');
 // add_action( 'after_setup_theme', 'setup_my_theme');
-
 
 function register_menu() {
   register_nav_menu( 'primary', __( 'Primary Menu1', 'theme-slug' ) );

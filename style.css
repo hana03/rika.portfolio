@@ -97,7 +97,6 @@ body {
     line-height: 1;
     font-family: Poppins, Helvetica, Arial, sans-serif;
     color: #606060;
-
 }
 
 article,
@@ -236,6 +235,7 @@ header
     list-style-type: none;
     padding-bottom: 20px;
 }
+
 .header-nav li{
     text-align: center;
     width: 100%;

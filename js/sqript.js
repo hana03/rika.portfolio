@@ -9,7 +9,6 @@ $(function () {
   $('.menu-item').on('click', function () {
     $('.header-nav').toggleClass('is-active');
   });
-
 });
 
 // skill
@@ -137,6 +136,5 @@ $(function () {
         });
       });
     });
-
   });
 });
