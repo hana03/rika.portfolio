@@ -1,0 +1,782 @@
+/*!
+Theme Name: Rika Oishi
+Author: Rika Oishi
+Author URI: portfolio2020.space
+Description: Rika OishiのPortfolioサイト2020-3です。
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.portfolio2020.space
+Tags: white, blue, light, two-columns, right-sidebar, fixed-layout, responsive-layout
+Text Domain:  portfolio2020
+
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1;
+    font-family: Poppins, Helvetica, Arial, sans-serif;
+    color: #606060;
+
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+/* ここから------ */
+
+/*--------------------
+header
+---------------------*/
+
+.container-sp {
+    margin: 0 20px
+}
+
+/* pc用 */
+
+.header-right {
+    display: none;
+}
+
+/* スマホ用 */
+
+.menu-btn-sp {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #fff;
+}
+
+.menu-btn-sp .fa-bars {
+    font-size: 1.8rem;
+}
+
+.header-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #555;
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+.header-nav li{
+    text-align: center;
+    width: 100%;
+}
+
+.header-nav li a {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.header-nav li a:hover {
+    color: tomato;
+}
+
+/* アニメーション前のメニューの状態 */
+.header-nav {
+    pointer-events: none;
+    opacity: 0;
+    transform-origin: center;
+    transform: scale(.5);
+    transition: all .3s ease;
+}
+
+/* アニメーション後のメニューの状態 */
+.header-nav.is-active {
+    pointer-events: auto;
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+.top-title {
+    height: 400px;
+    background: radial-gradient(rgb(195, 245, 242), rgb(86, 211, 203));
+}
+
+.ttl-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.top-title-name {
+    font-size: 3.0rem;
+    margin-bottom: 15px;
+}
+
+.top-title-p {
+    font-size: 3.0rem;
+    text-align: center;
+}
+
+/*--------------------
+main
+---------------------*/
+
+.section-title {
+    padding: 35px 0;
+    background: radial-gradient(rgb(209, 247, 225), rgb(219, 247, 233));
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+/* main */
+/* about-wrapper */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-profile {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.about-name-ja {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.about-birthday {
+    margin-bottom: 5px;
+}
+
+.about-text {
+    margin: 20px 0;
+    line-height: 23px;
+    text-align: left;
+}
+
+.about-sns {
+    font-size: 3.0rem;
+    margin: 8px auto;
+}
+
+.profile-info {
+    margin-bottom: 15px;
+}
+
+.profile-01 {
+    font-size: 1.4rem;
+    margin-right: 10px;
+    display: inline-block;
+    text-align-last: justify;
+    width: 75px;
+}
+
+.profile-info td {
+    font-size: 1.4rem;
+}
+
+.profile-massege-title {
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+
+.profile-massege {
+    line-height: 25px;
+    font-size: 1.4rem;
+}
+
+.profile-br {
+    margin-bottom: 10px;
+}
+
+
+.fa-instagram {
+    color: rgb(82, 177, 240);
+}
+
+.fa-instagram:hover {
+    color: rgb(247, 90, 116);
+    transform: scale(1.5);
+}
+
+/* スクロール */
+
+.profile-info,
+.about-profile,
+.profile-massege-title,
+.profile-br,
+.skill-item-sc,
+.works-image-hover {
+    opacity: 0;
+    transform: translate(0, 45px);
+    transition: all 0.9s;
+}
+
+.profile-info.effect-scroll,
+.about-profile.effect-scroll,
+.profile-massege.effect-scroll,
+.profile-br.effect-scroll,
+.skill-item-sc.effect-scroll,
+.works-image-hover.effect-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* main */
+/* skills */
+
+.skills-section-title {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    border-bottom: 2px solid rgb(86, 211, 203);
+    padding: 5px 10px 5px 8px;
+    margin-right: 20px;
+    display: block;
+}
+
+.language {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.devicon-visualstudio-plain {
+    color: blue;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-right: 20px
+}
+
+.skills-section-item {
+    list-style-type: none;
+}
+
+.skills-section-item li {
+    display: flex;
+    margin-left: 8px;
+}
+
+.coding-imge-box {
+    display: none;
+}
+
+/* main */
+/* works-wrapper */
+
+.works-title {
+    margin: 20px 0;
+    font-size: 2.5rem;
+    border-bottom: 2px solid rgb(86, 211, 203);
+    padding: 5px 10px 5px 8px;
+    margin-right: 20px;
+    display: block;
+}
+
+.works-title-sub {
+    font-size: 2.0rem;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+
+.ggh {
+    width: 100%;
+}
+
+.works-image-hover {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.works-image-hover .caption {
+    font-size: 200%;
+    color: #fff;
+    padding-top: 80px;
+    padding-left: 0px
+}
+
+.works-image-hover .mask,
+.works-image-hover .mask2,
+.works-image-hover .mask3,
+.works-image-hover .mask4,
+.works-image-hover .mask5,
+.works-image-hover .mask6 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.5s ease;
+}
+
+.works-lity-container {
+    background: rgba(0, 0, 0, 0.9);
+    min-width: 100%;
+    height: 100%;
+}
+
+.works-img {
+    width: 320px;
+}
+
+.works-lity-wrap,
+.works-lity-wrap2,
+.works-lity-wrap3,
+.works-lity-wrap4,
+.works-lity-wrap5,
+.works-lity-wrap6 {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+
+.works-image-hover:hover .mask,
+.works-image-hover:hover .mask2,
+.works-image-hover:hover .mask3,
+.works-image-hover:hover .mask4,
+.works-image-hover:hover .mask5,
+.works-image-hover:hover .mask6 {
+    opacity: 1;
+    /* マスクを表示する */
+    padding-left: 75px;
+    /* 右にずらす */
+    transition: 0.5s;
+}
+
+.works-port-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fa-times-circle {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(94, 157, 240);
+    z-index: 100;
+}
+
+.caption {
+    font-size: 2.0rem;
+    line-height: 26px;
+}
+
+.works-image-hover {
+    opacity: 0;
+    transform: translate(0, 45px);
+    transition: all 0.9s;
+}
+
+.works-image-hover.effect-scroll {
+    opacity: 1;
+    transform: translate(0, 0);
+    border: 1px solid rgb(177, 175, 175);
+    box-shadow: 2px 2px 2px rgb(216, 214, 214);
+    margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+    background-color: #606060;
+    padding: 20px 0;
+}
+
+.footer-nav {
+    list-style-type: none;
+}
+
+.footer-nav li {
+    font-size: 1.8rem;
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.fa-angle-right {
+    margin-right: 5px;
+}
+
+.footer-nav li a:hover {
+    color: tomato;
+}
+
+.copywriter-area {
+    text-align: center;
+
+}
+
+.copywriter-text{
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: #606060;
+
+}
+
+@media(min-width : 780px) {
+
+    /* header */
+
+    .header-right {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background-color: rgb(253, 251, 239, 0.8);
+        height: 65px;
+        width: 100%;
+    }
+
+    .header-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header-pc-nav {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+    }
+
+    .header-pc-nav li {
+        padding: 0 20px;
+        height: 65px;
+    }
+
+    .header-pc-nav li a {
+        text-decoration: none;
+        line-height: 65px;
+        color: #606060;
+        font-size: 1.8rem;
+        display: inline-block;
+    }
+
+    .header-pc-nav li a:hover {
+        color: tomato;
+    }
+
+    .ttl-flex{
+        align-items: flex-start;
+    }
+
+    .about-section {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-profile {
+        width: 45%;
+        text-align: left;
+    }
+
+    .about-text {
+        width: 45%;
+    }
+
+    .header-sp {
+        display: none;
+    }
+
+    .top-title-p {
+        font-size: 3.0rem;
+        text-align: left;
+    }
+
+    .skills-section-title,
+    .works-title {
+        display: block;
+        width: 250px;
+    }
+
+    .skills-section {
+        margin: 30px 0;
+    }
+
+    .works-port-item {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .works-image-hover {
+        width: 48%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .works-title-sub {
+        color: #fff;
+    }
+
+    .works-img {
+        width: 400px;
+    }
+
+    .fa-times-circle {
+        color: #fff;
+    }
+
+    @media(min-width:1200px) {
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .top-title{
+            height: 600px;
+
+        }
+
+        .ttl-flex{
+            height: 600px;
+        }
+
+        .skills-section-coding {
+            display: flex;
+            text-align: center;
+        }
+
+        .coding-imge-box {
+            display: block;
+        }
+
+        .coding-imge {
+            vertical-align: bottom;
+        }
+
+        .skills-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        .skills-list {
+            width: 50%;
+            align-self: center;
+        }
+
+        .works-title {
+            color: #fff;
+        }
+
+        .works-section {
+            background-image: url(./imge/keyboard-338502_1920.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 100px 0;
+        }
+
+        .works-image-hover {
+            width: 32%;
+        }
+    }
+}
