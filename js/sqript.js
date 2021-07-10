@@ -6,7 +6,7 @@ $(function () {
     $('.header-nav').toggleClass('is-active');
   });
 
-  $('.menu-item').on('click', function () {
+  $('.header-nav').on('click', function () {
     $('.header-nav').toggleClass('is-active');
   });
 });
