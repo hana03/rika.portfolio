@@ -1,14 +1,14 @@
 <?php
 
-function rikaportfolio2020_scripts() {
+function rikaportfolio20201_scripts() {
   //cssを読み込む
-wp_enqueue_style( 'rikaportfolio2020', get_stylesheet_uri() );
+wp_enqueue_style( 'rikaportfolio20201', get_stylesheet_uri() );
   //jsを読み込む
-wp_enqueue_script( 'rikaportfolio2020', get_template_directory_uri() . '/js/sqript.js', array('jquery'), '2020', true );
+wp_enqueue_script( 'rikaportfolio20201', get_template_directory_uri() . '/js/sqript.js', array('jquery'), '2020', true );
 
 }
 
-add_action( 'wp_enqueue_scripts', 'rikaportfolio2020_scripts' );
+add_action( 'wp_enqueue_scripts', 'rikaportfolio20201_scripts' );
 
 add_action( 'after_setup_theme', 'register_menu' );
 
