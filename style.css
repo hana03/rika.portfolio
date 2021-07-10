@@ -698,6 +698,20 @@ footer {
 
     .skills-section {
         margin: 30px 0;
+        display: flex;
+        align-items: center;
+    }
+    .skills-list{
+        width: 50%;
+    }
+
+    .coding-imge-box {
+        display: block;
+        width: 50%;
+    }
+
+    .coding-imge-box img{
+        width: 100%;
     }
 
     .works-port-item {
@@ -741,10 +755,6 @@ footer {
         .skills-section-coding {
             display: flex;
             text-align: center;
-        }
-
-        .coding-imge-box {
-            display: block;
         }
 
         .coding-imge {
